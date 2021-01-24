@@ -164,9 +164,9 @@ ${$(
 [CQ:face,id=169]${url + "#" + comment.get("objectId")}`;
     axios
       .get(
-        `https://qmsg.zendee.cn:443/send/${
+        `https://qmsg.zendee.cn/send/${
           process.env.QMSG_KEY
-        }.html?msg=${encodeURIComponent(scContent)}` + qq
+        }?msg=${encodeURIComponent(scContent)}` + qq
       )
       .then(function (response) {
         if (response.status === 200 && response.data.success === true)
