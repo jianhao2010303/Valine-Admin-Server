@@ -128,9 +128,9 @@ exports.notice = (comment) => {
     if (process.env.QQ_SHAKE != null) {
       axios
         .get(
-          `https://qmsg.zendee.cn:443/send/${
+          `https://qmsg.zendee.cn/send/${
             process.env.QMSG_KEY
-          }.html?msg=${encodeURIComponent("[CQ:shake]")}`
+          }?msg=${encodeURIComponent("[CQ:shake]")}`
         )
         .then(function (response) {
           if (response.status === 200 && response.data.success === true) {
